@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(56, 56, 56);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container_seleccion_fecha {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 60%;
+}
+
+.text {
+    color: white;
+    font-size: 12px;
+}
+
+input {
+    width: 60%;
+    height: 30px;
+    border-radius: 8px;
+}
+
+#id_calendar {
+    padding: 10px;
+}
+
+#id_botonEdad {
+    background-color: blue;
+    border: 1px solid blue;
+    color: white;
+    transition: .5s;
+}
+
+#id_botonEdad:hover {
+    background-color: rgb(46, 46, 247);
+    border: 1px solid rgb(46, 46, 247);
+    cursor: pointer;
+}
+
+.background_respuesta {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.901);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: mostrar;
+    animation-duration: 2s;
+}
+
+@keyframes mostrar {
+    0% {
+        opacity: 0;
+    } 
+    100% {
+        opacity: 1;
+    }
+}
+
+.container_respuesta {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.667);
+    width: 90vw;
+    justify-content: center;
+    height: 60px;
+    border-radius: 8px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.respuesta, .edad {
+    font-weight: bold;
+}
+
+.icon {
+    font-size: 40px;
+}
+
+.ocultar {
+    display: none;
+}
