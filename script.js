@@ -1,17 +1,11 @@
 const calendario = document.querySelector("#id_calendar");
 const boton = document.querySelector("#id_botonEdad");
 const mostrar = document.querySelector(".background_respuesta");
+const equis = document.querySelector('.fa-x-twitter');
 
 function obtenerDiasEnMes(mes, año) {
-    // Ten en cuenta que los meses en JavaScript van de 0 a 11, donde 0 es enero y 11 es diciembre.
-    // Por lo tanto, debes restar 1 al mes proporcionado.
     mes = mes - 1;
-
-    // Crea una nueva instancia de Date con el día 0 del mes siguiente.
-    // Esto significa que estás en el último día del mes actual.
     var fecha = new Date(año, mes + 1, 0);
-
-    // El método getDate() te dará el último día del mes, que es igual al total de días en el mes.
     return fecha.getDate();
 }
 
@@ -59,4 +53,9 @@ boton.addEventListener("click", function () {
         icon.classList.add("fa-regular");
         icon.classList.add("fa-face-sad-tear");
     }
+});
+
+equis.addEventListener('click', function() {
+    mostrar.classList.add("ocultar");
+    location.reload();
 });
